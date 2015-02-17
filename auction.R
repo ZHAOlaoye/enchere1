@@ -24,13 +24,13 @@ trans=function(mois,names,names1) {
 
 
 
-B7<-read.csv2("1407.csv",sep="\t",stringsAsFactors=FALSE, fileEncoding="latin1")
-B8<-read.csv2("1408.csv",sep="\t",stringsAsFactors=FALSE, fileEncoding="latin1")
-B9<-read.csv2("1409.csv",sep="\t",stringsAsFactors=FALSE, fileEncoding="latin1")
-B10<-read.csv2("1410.csv",sep="\t",stringsAsFactors=FALSE, fileEncoding="latin1")
-B11<-read.csv2("1411.csv",sep="\t",stringsAsFactors=FALSE, fileEncoding="latin1")
-B12<-read.csv2("1412.csv",sep="\t",stringsAsFactors=FALSE, fileEncoding="latin1")
-B13<-read.csv2("1501.csv",sep="\t",stringsAsFactors=FALSE, fileEncoding="latin1")
+B7<-read.csv2("1407.csv",sep="\t",fileEncoding="latin1")
+B8<-read.csv2("1408.csv",sep="\t",fileEncoding="latin1")
+B9<-read.csv2("1409.csv",sep="\t",fileEncoding="latin1")
+B10<-read.csv2("1410.csv",sep="\t",fileEncoding="latin1")
+B11<-read.csv2("1411.csv",sep="\t",fileEncoding="latin1")
+B12<-read.csv2("1412.csv",sep="\t",fileEncoding="latin1")
+B13<-read.csv2("1501.csv",sep="\t",fileEncoding="latin1")
 
 
 

@@ -85,5 +85,23 @@ shinyServer(function(input, output) {
     return(mat)
   })
   
+  output$change <- renderText({
+    
+    mois=datasetInput()
+    T=CPC(mois)
+    max=maxBid(T,input$position)
+    max=sum(max)
+    max
+    
+  })
   
+  output$change1 <- renderText({
+    
+    mois=datasetInput()
+    T=CPC(mois)
+    min=minBid(T,input$position)
+    min=sum(min)
+    min
+    
+  })
 })

@@ -40,7 +40,11 @@ shinyUI(pageWithSidebar(
   mainPanel(
     tabsetPanel(
       tabPanel("Group",dataTableOutput("look")),
-      tabPanel("Est",dataTableOutput("lk"))
+      tabPanel("Est",dataTableOutput("lk")),
+      tabPanel("Position",
+               wellPanel(span("Max bid:",textOutput("change"))),
+               wellPanel(span("Min bid:",textOutput("change1")))
+      )
       
     )
     

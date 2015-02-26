@@ -62,6 +62,71 @@ Jour1
 
 
 
+CPC=function(mois){
+  t=mois
+  cout=which(colnames(t)=="cost")
+  clics=which(colnames(t)=="Clics")
+  t=t[which(t[,clics]!=0),]
+  cpc=t[,cout]/t[,clics]
+  
+  t=cbind(t,cpc)
+  
+  
+  t
+  
+  
+}
+
+
+
+
+
+
+
+maxBid=function(tt,posi){
+  
+  a=which(colnames(tt)=="cpc")
+  b=which(colnames(tt)=="Position.moy.")
+  
+  
+  
+  tt=aggregate(tt[,a],by=list(Position.moy.=tt[,b]),FUN=mean,na.rm=TRUE)
+  
+  
+  cons=lm(tt[,2] ~ tt[,1], data =tt)$coe[1]
+  para=lm(tt[,2] ~ tt[,1], data =tt)$coe[2]
+  
+  
+  max=cons+para*(posi-1)
+  
+  
+  max
+  
+}
+
+
+
+
+minBid=function(tt,posi){
+  
+  a=which(colnames(tt)=="cpc")
+  b=which(colnames(tt)=="Position.moy.")
+  
+  
+  
+  tt=aggregate(tt[,a],by=list(Position.moy.=tt[,b]),FUN=mean,na.rm=TRUE)
+  
+  
+  cons=lm(tt[,2] ~ tt[,1], data =tt)$coe[1]
+  para=lm(tt[,2] ~ tt[,1], data =tt)$coe[2]
+  
+  
+  min=cons+para*posi
+  
+  
+  min
+  
+}
 
 
 
